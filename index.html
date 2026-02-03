@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Happy Valentine's Day ❤️</title>
+  <title>Happy Valentine’s Day ❤️</title>
+
   <style>
     :root {
       --pink: #ff6b81;
@@ -11,14 +12,19 @@
       --wine: #8b1e3f;
       --ink: #2b2b2b;
     }
-    * { box-sizing: border-box; }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
-      font-family: 'Georgia', serif;
+      font-family: Georgia, serif;
       color: var(--ink);
       background: linear-gradient(180deg, #fff 0%, var(--rose) 100%);
       overflow-x: hidden;
     }
+
     header {
       min-height: 100vh;
       display: grid;
@@ -27,154 +33,160 @@
       padding: 2rem;
       position: relative;
     }
+
     header h1 {
       font-size: clamp(2.2rem, 6vw, 4rem);
       color: var(--wine);
       margin-bottom: 1rem;
     }
+
     header p {
-      font-size: clamp(1.1rem, 2.5vw, 1.4rem);
-      max-width: 720px;
+      font-size: 1.2rem;
+      max-width: 700px;
     }
-    .heart {
-      position: absolute;
-      width: 14px; height: 14px;
-      background: var(--pink);
-      transform: rotate(45deg);
-      animation: float 8s linear infinite;
-      opacity: 0.8;
-    }
-    .heart::before, .heart::after {
-      content: '';
-      position: absolute;
-      width: 14px; height: 14px;
-      background: var(--pink);
-      border-radius: 50%;
-    }
-    .heart::before { left: -7px; }
-    .heart::after { top: -7px; }
-    @keyframes float {
-      from { transform: translateY(0) rotate(45deg); }
-      to { transform: translateY(-120vh) rotate(45deg); }
-    }
+
     section {
       padding: 4rem 1.5rem;
       max-width: 1000px;
       margin: auto;
     }
+
     .card {
       background: #fff;
       border-radius: 18px;
       padding: 2rem;
       box-shadow: 0 20px 40px rgba(0,0,0,0.08);
       margin-bottom: 2rem;
+      text-align: center;
     }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1.5rem;
+
+    button {
+      background: var(--wine);
+      color: white;
+      border: none;
+      padding: 0.8rem 1.4rem;
+      border-radius: 999px;
+      font-size: 1rem;
+      cursor: pointer;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+      transition: transform 0.1s ease;
     }
-    .polaroid {
-      background: #fff;
-      padding: 0.75rem 0.75rem 1.5rem;
-      border-radius: 8px;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-      transform: rotate(var(--r));
+
+    button:hover {
+      transform: translateY(-2px);
     }
-    .polaroid img {
-      width: 100%; height: 220px; object-fit: cover; border-radius: 6px;
+
+    .heart {
+      position: absolute;
+      width: 14px;
+      height: 14px;
+      background: var(--pink);
+      transform: rotate(45deg);
+      animation: float 8s linear infinite;
+      opacity: 0.8;
     }
-    .polaroid span {
-      display: block; text-align: center; margin-top: 0.5rem; font-size: 0.95rem;
+
+    .heart::before,
+    .heart::after {
+      content: "";
+      position: absolute;
+      width: 14px;
+      height: 14px;
+      background: var(--pink);
+      border-radius: 50%;
     }
+
+    .heart::before {
+      left: -7px;
+    }
+
+    .heart::after {
+      top: -7px;
+    }
+
+    @keyframes float {
+      from {
+        transform: translateY(0) rotate(45deg);
+      }
+      to {
+        transform: translateY(-120vh) rotate(45deg);
+      }
+    }
+
     footer {
       text-align: center;
       padding: 3rem 1rem 5rem;
       color: #555;
     }
-    button {
-      background: var(--wine);
-      color: #fff;
-      border: none;
-      padding: 0.8rem 1.2rem;
-      border-radius: 999px;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: transform .1s ease, box-shadow .1s ease;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
-    }
-    button:hover { transform: translateY(-1px); box-shadow: 0 12px 22px rgba(0,0,0,0.18); }
   </style>
 </head>
+
 <body>
+
   <header>
-    <h1>Happy Valentine's Day, My Love ❤️</h1>
+    <h1>Happy Valentine’s Day, My Love ❤️</h1>
     <p>
-      <!-- EDIT THIS -->
-      To my incredible husband—this little website is my way of saying thank you for every laugh,
-      every hug, and every day we choose each other.
+      To my wonderful husband SRITAM — this little website is my way of saying
+      thank you for every smile, every hug, and every beautiful moment we share.
     </p>
   </header>
 
   <section>
+
     <div class="card">
       <h2>Why I Love You</h2>
-      <ul>
-        <!-- EDIT THESE -->
-        <li>You make ordinary days feel special.</li>
-        <li>You support my dreams like they're your own.</li>
-        <li>You make me laugh when I need it most.</li>
-        <li>You are my home.</li>
+      <ul style="text-align:left; max-width:600px; margin:auto;">
+        <li>You make my life brighter just by being in it.</li>
+        <li>You support me and stand by me always.</li>
+        <li>You make me laugh even on my hardest days.</li>
+        <li>You are my forever.</li>
       </ul>
     </div>
 
     <div class="card">
-      <h2>Our Favorite Moments</h2>
-      <div class="grid">
-        <!-- Replace image URLs with your own photos -->
-        <div class="polaroid" style="--r:-2deg">
-          <img src="https://images.unsplash.com/photo-1520975922284-8b456906c813?q=80&w=1200" alt="Memory 1" />
-          <span>Our first adventure</span>
-        </div>
-        <div class="polaroid" style="--r:2deg">
-          <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?q=80&w=1200" alt="Memory 2" />
-          <span>Laughing together</span>
-        </div>
-        <div class="polaroid" style="--r:-1deg">
-          <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=1200" alt="Memory 3" />
-          <span>Just us</span>
-        </div>
-      </div>
-    </div>
+      <h2>SRITAM, will you be my forever Valentine? 💘</h2>
+      <p style="margin-bottom:1.5rem;">Choose wisely 😉</p>
 
-    <div class="card">
-      <h2>A Little Surprise</h2>
-      <p>Click the button for a message from my heart.</p>
-      <button onclick="reveal()">Open 💌</button>
-      <p id="secret" style="display:none; margin-top:1rem; font-size:1.1rem;">
-        <!-- EDIT THIS -->
-        I would choose you in every lifetime. Happy Valentine's Day—now and always.
+      <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+        <button onclick="yesClicked()">Yes ❤️</button>
+        <button id="noBtn" style="background:#ccc; color:#333; position:relative;">
+          No 🙃
+        </button>
+      </div>
+
+      <p id="answer" style="display:none; margin-top:1.5rem; font-size:1.3rem; color:#8b1e3f;">
+        Thank you, SRITAM 🥰 I love you forever ❤️
       </p>
     </div>
+
   </section>
 
   <footer>
-    Made with love, just for you ❤️
+    Made with all my love, just for you ❤️
   </footer>
 
   <script>
     // Floating hearts
     for (let i = 0; i < 25; i++) {
-      const h = document.createElement('div');
-      h.className = 'heart';
-      h.style.left = Math.random() * 100 + 'vw';
-      h.style.bottom = '-20px';
-      h.style.animationDelay = Math.random() * 8 + 's';
-      document.body.appendChild(h);
+      const heart = document.createElement("div");
+      heart.className = "heart";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.bottom = "-20px";
+      heart.style.animationDelay = Math.random() * 8 + "s";
+      document.body.appendChild(heart);
     }
-    function reveal() {
-      document.getElementById('secret').style.display = 'block';
+
+    function yesClicked() {
+      document.getElementById("answer").style.display = "block";
     }
+
+    const noBtn = document.getElementById("noBtn");
+    noBtn.addEventListener("mouseenter", () => {
+      const x = Math.random() * 200 - 100;
+      const y = Math.random() * 80 - 40;
+      noBtn.style.transform = `translate(${x}px, ${y}px)`;
+    });
   </script>
+
 </body>
 </html>
